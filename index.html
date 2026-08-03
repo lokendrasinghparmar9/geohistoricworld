@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geo Historic World | Cartography of Time & Geopolitical Power</title>
+  <meta name="description" content="Explore animated maps, historical timelines, geopolitics documentaries, and territorial evolution on Geo Historic World YouTube channel. Contact: geohistoricworld@gmail.com">
+  <meta name="keywords" content="Geo Historic World, Geopolitics, Historical Maps, YouTube Channel, Roman Empire, World War II, Cartography, Map Animation">
+  
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:title" content="Geo Historic World - Official Website">
+  <meta property="og:description" content="Unveiling the Cartography of Time & Geopolitical Power. Interactive 3D globe, documentary library, historical timelines, and trivia.">
+  <meta property="og:image" content="assets/banner.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-logo">
+        <img src="assets/logo.jpg" alt="Geo Historic World Logo" class="logo-img">
+        <span class="brand-name">Geo Historic World</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#documentaries" class="nav-link">Documentaries</a></li>
+        <li><a href="#shorts" class="nav-link">Shorts</a></li>
+        <li><a href="#timeline" class="nav-link">Timeline Map</a></li>
+        <li><a href="#quiz" class="nav-link">Geo Quiz</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="https://youtube.com/@geohistoricworld?si=cW3ceLG2CfFmR-ng" target="_blank" rel="noopener" class="btn-subscribe">
+        <i class="fab fa-youtube"></i> Subscribe
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Channel Banner Strip -->
+  <div class="banner-strip">
+    <div class="banner-overlay"></div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-compass"></i> Official YouTube Channel Hub
+          </div>
+          <h1 class="hero-title">
+            Unveiling the <span>Cartography</span> of Time & Power
+          </h1>
+          <p class="hero-desc">
+            Explore how ancient empires, shifting borders, trade routes, and military conflicts shaped the modern political map of Earth through animated documentary storytelling.
+          </p>
+          <div class="hero-actions">
+            <a href="#documentaries" class="btn-primary">
+              <i class="fas fa-play"></i> Watch Documentaries
+            </a>
+            <a href="#contact" class="btn-secondary">
+              <i class="fas fa-envelope"></i> Contact Channel
+            </a>
+          </div>
+        </div>
+
+        <!-- 3D Canvas Globe Box -->
+        <div class="globe-wrapper glass-panel">
+          <canvas id="globeCanvas"></canvas>
+          <div class="globe-tooltip">
+            <i class="fas fa-mouse-pointer"></i> Drag to rotate globe • Click glowing markers
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Channel Stats Ticker -->
+    <section class="stats-section container">
+      <div class="stats-grid">
+        <div class="stat-card glass-panel">
+          <div class="stat-number">125K+</div>
+          <div class="stat-label">Subscribers</div>
+        </div>
+        <div class="stat-card glass-panel">
+          <div class="stat-number">18.5M+</div>
+          <div class="stat-label">Total Channel Views</div>
+        </div>
+        <div class="stat-card glass-panel">
+          <div class="stat-number">140+</div>
+          <div class="stat-label">Map Animations</div>
+        </div>
+        <div class="stat-card glass-panel">
+          <div class="stat-number">190+</div>
+          <div class="stat-label">Countries Reached</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documentaries Video Gallery Section -->
+    <section class="videos-section" id="documentaries">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">ARCHIVE GALLERY</div>
+          <h2 class="section-title">Geopolitical Documentaries</h2>
+          <p class="section-subtitle">Deep dive into high-resolution historical mapping videos and geopolitical boundary breakdowns.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="video-controls glass-panel" style="padding: 16px 24px;">
+          <div class="tabs-group" id="tabsGroup">
+            <!-- Rendered by JS -->
+          </div>
+
+          <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search videos, empires, wars...">
+          </div>
+        </div>
+
+        <!-- Video Grid -->
+        <div class="video-grid" id="videoGrid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Shorts Section -->
+    <section class="shorts-section" id="shorts">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">BITE-SIZED MAPS</div>
+          <h2 class="section-title">Featured YouTube Shorts</h2>
+          <p class="section-subtitle">Quick 60-second map trivia and fascinating border facts.</p>
+        </div>
+
+        <div class="shorts-grid" id="shortsGrid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Timeline Section -->
+    <section class="timeline-section" id="timeline">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">CHRONOLOGICAL EXPLORER</div>
+          <h2 class="section-title">Interactive Epoch Timeline</h2>
+          <p class="section-subtitle">Navigate through key eras of human cartography and geopolitical realignment.</p>
+        </div>
+
+        <div class="timeline-box glass-panel">
+          <div class="timeline-nav" id="timelineNav">
+            <!-- Rendered by JS -->
+          </div>
+
+          <div class="timeline-display" id="timelineDisplay">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Geo-History Quiz Section -->
+    <section class="quiz-section" id="quiz">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">TRIVIA CHALLENGE</div>
+          <h2 class="section-title">Geo-History Master Quiz</h2>
+          <p class="section-subtitle">Test your knowledge of world borders, ancient empires, and geopolitical history.</p>
+        </div>
+
+        <div class="quiz-container glass-panel" id="quizBox">
+          <div class="quiz-header">
+            <span class="quiz-progress-text" id="quizProgressText">Question 1 of 5</span>
+            <span style="font-size: 0.85rem; color: var(--accent-gold);"><i class="fas fa-award"></i> Master Badge</span>
+          </div>
+
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-fill" id="quizProgressFill"></div>
+          </div>
+
+          <h3 class="quiz-question-text" id="quizQuestionText">Loading Question...</h3>
+
+          <div class="quiz-options" id="quizOptions">
+            <!-- Rendered by JS -->
+          </div>
+
+          <div class="quiz-explanation" id="quizExplanation">
+            <!-- Explanation text -->
+          </div>
+
+          <div class="quiz-actions">
+            <button class="btn-primary" id="quizNextBtn" onclick="nextQuizQuestion()" style="display: none;">
+              Next Question →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dedicated Contact & Inquiries Section -->
+    <section class="contact-section" id="contact" style="padding: 80px 0;">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">GET IN TOUCH</div>
+          <h2 class="section-title">Contact & Business Inquiries</h2>
+          <p class="section-subtitle">Have a sponsorship proposal, map animation inquiry, video topic suggestion, or business question? We'd love to hear from you!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Cards -->
+          <div class="contact-info-col">
+            <div class="contact-card glass-panel">
+              <div class="contact-icon"><i class="fas fa-paper-plane"></i></div>
+              <div>
+                <h3 class="contact-card-title">Official Email</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 8px;">Direct inquiries & business collaborations:</p>
+                <div class="email-badge-box">
+                  <a href="mailto:geohistoricworld@gmail.com" class="email-link" id="contactEmailLink">
+                    geohistoricworld@gmail.com
+                  </a>
+                  <button class="btn-copy-email" onclick="copyEmailToClipboard()" title="Copy email address">
+                    <i class="far fa-copy"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel" style="margin-top: 20px;">
+              <div class="contact-icon" style="color: var(--accent-cyan); border-color: var(--accent-cyan);"><i class="fab fa-youtube"></i></div>
+              <div>
+                <h3 class="contact-card-title">YouTube Channel</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 8px;">Official Handle:</p>
+                <a href="https://youtube.com/@geohistoricworld?si=cW3ceLG2CfFmR-ng" target="_blank" rel="noopener" style="color: var(--accent-cyan); font-weight: 700; text-decoration: none;">
+                  @geohistoricworld <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel" style="margin-top: 20px;">
+              <div class="contact-icon" style="color: #34D399; border-color: #34D399;"><i class="fas fa-handshake"></i></div>
+              <div>
+                <h3 class="contact-card-title">Sponsorships & Media</h3>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">Open for brand integrations, history documentary partnerships, custom cartography commissions, and educational collaborations.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Inquiry Form -->
+          <div class="contact-form-col glass-panel" style="padding: 32px;">
+            <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 20px; color: var(--accent-gold);">
+              <i class="fas fa-envelope-open-text"></i> Send a Direct Message
+            </h3>
+            <form id="contactForm">
+              <div style="margin-bottom: 16px;">
+                <label style="display: block; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 6px;">Your Name</label>
+                <input type="text" id="contactName" class="search-input" placeholder="e.g. Alexander Vance" required style="padding-left: 16px;">
+              </div>
+              <div style="margin-bottom: 16px;">
+                <label style="display: block; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 6px;">Your Email Address</label>
+                <input type="email" id="contactEmailInput" class="search-input" placeholder="e.g. name@example.com" required style="padding-left: 16px;">
+              </div>
+              <div style="margin-bottom: 16px;">
+                <label style="display: block; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 6px;">Subject / Inquiry Type</label>
+                <select id="contactSubject" class="search-input" style="padding-left: 16px; background: #0F172A; cursor: pointer;">
+                  <option value="Business Inquiry">Business & Sponsorship Inquiry</option>
+                  <option value="Video Topic Suggestion">Video Topic Suggestion</option>
+                  <option value="Map Cartography Commission">Map Cartography Commission</option>
+                  <option value="General Fan Mail">General Fan Mail</option>
+                </select>
+              </div>
+              <div style="margin-bottom: 20px;">
+                <label style="display: block; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 6px;">Message</label>
+                <textarea id="contactMessage" class="search-input" rows="4" placeholder="Write your message here..." required style="padding-left: 16px; padding-top: 10px; resize: vertical;"></textarea>
+              </div>
+              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Video Modal -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal-box glass-panel">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
+      <div class="modal-video-wrapper" id="modalVideoWrapper"></div>
+      <h3 class="modal-title" id="modalTitle">Video Title</h3>
+      <p class="modal-desc" id="modalDesc">Video Description...</p>
+      <div style="display: flex; gap: 12px;">
+        <a href="https://youtube.com/@geohistoricworld?si=cW3ceLG2CfFmR-ng" target="_blank" rel="noopener" class="btn-subscribe">
+          <i class="fab fa-youtube"></i> Subscribe on YouTube
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="brand-logo">
+            <img src="assets/logo.jpg" alt="Geo Historic World Logo" class="logo-img">
+            <span class="brand-name">Geo Historic World</span>
+          </a>
+          <p>Visualizing world history, territorial shifts, map animations, and geopolitical documentaries.</p>
+          <div style="margin-top: 14px; font-size: 0.88rem; color: var(--accent-gold);">
+            <i class="fas fa-envelope"></i> Contact: <a href="mailto:geohistoricworld@gmail.com" style="color: #FFF; font-weight: 600; text-decoration: none;">geohistoricworld@gmail.com</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#documentaries">Documentaries</a></li>
+            <li><a href="#shorts">Shorts</a></li>
+            <li><a href="#timeline">Timeline Map</a></li>
+            <li><a href="#quiz">Geo Quiz</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Join Channel Newsletter</h4>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 14px;">Receive email alerts when new map documentaries and historical deep dives release.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+            <button type="submit" class="btn-primary" style="padding: 10px 18px; font-size: 0.88rem;">
+              Join
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Geo Historic World. All rights reserved. Official Channel Website for @geohistoricworld.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="globe.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
